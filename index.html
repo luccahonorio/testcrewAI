@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#041e42">
+  <meta name="description" content="Design escandinavo e cuidado em cada detalhe. Descubra inspirações Electrolux para sua cozinha, lavanderia e casa.">
+  <title>Electrolux | Cuidado que faz a diferença</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <div class="announcement">Design sueco. Cuidado que vai além. <span>Desde 1919.</span></div>
+  <header class="header">
+    <a class="wordmark" href="#" aria-label="Electrolux, início">Electrolux<span class="brand-dot"></span></a>
+    <nav class="navigation" aria-label="Navegação principal" id="navigation">
+      <a href="#ambientes">Para sua casa</a>
+      <a href="#essencia">Nossa essência</a>
+      <a href="#cuidados">Um jeito melhor de viver</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="search-open" aria-label="Buscar ambientes" title="Buscar ambientes"><i data-lucide="search"></i></button>
+      <a class="header-cta" href="#ambientes">Explore <i data-lucide="arrow-up-right"></i></a>
+      <button class="icon-button menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-controls="navigation" aria-expanded="false" title="Abrir menu"><i data-lucide="menu"></i></button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-image" src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=2400&q=85" alt="Cozinha iluminada com bancada, plantas e acabamentos naturais" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <span class="eyebrow"><span class="small-line"></span> A vida acontece em casa</span>
+        <h1 id="hero-title">Electrolux<span>.</span></h1>
+        <p class="hero-heading">Mais cuidado.<br>Mais vida.</p>
+        <p class="hero-description">Design que inspira. Escolhas que simplificam.<br>Para os pequenos momentos que fazem tudo valer a pena.</p>
+        <a class="button button-primary" href="#ambientes">Encontre sua inspiração <i data-lucide="arrow-right"></i></a>
+        <div class="hero-caption"><span class="caption-line"></span> Pensado na Suécia. Vivido na sua casa.</div>
+      </div>
+      <a href="#ambientes" class="hero-scroll" aria-label="Ver ambientes" title="Ver ambientes"><i data-lucide="arrow-down"></i></a>
+      <div class="image-credit">CASAS REAIS. NOVAS POSSIBILIDADES.</div>
+    </section>
+
+    <section class="values-strip" aria-label="Nossos valores">
+      <div><i data-lucide="sparkles"></i><span>Design com propósito</span></div>
+      <div><i data-lucide="leaf"></i><span>Cuidado com o futuro</span></div>
+      <div><i data-lucide="heart-handshake"></i><span>Bem-estar no dia a dia</span></div>
+    </section>
+
+    <section class="section environments" id="ambientes">
+      <div class="section-heading reveal">
+        <div><span class="eyebrow">Seu espaço, suas possibilidades</span><h2>Uma casa. Muitos jeitos de viver.</h2></div>
+        <p>Da primeira xícara ao último ciclo do dia.<br>O cuidado está em cada ambiente.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrar ambientes">
+        <button class="filter active" data-filter="all" aria-pressed="true">Todos os ambientes</button>
+        <button class="filter" data-filter="cozinha" aria-pressed="false">Cozinha</button>
+        <button class="filter" data-filter="lavanderia" aria-pressed="false">Lavanderia</button>
+        <button class="filter" data-filter="conforto" aria-pressed="false">Conforto</button>
+      </div>
+      <div class="environment-grid">
+        <article class="environment-card reveal" data-category="cozinha">
+          <button class="card-image-button" data-detail="cozinha" aria-label="Conhecer inspirações para a cozinha"><img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=900&q=85" alt="Cozinha contemporânea com bancada ampla e luz natural" loading="lazy"><span class="image-tag">Sabor em cada momento</span><span class="card-arrow"><i data-lucide="arrow-up-right"></i></span></button>
+          <div class="card-text"><span class="card-number">01 /</span><div><h3>Cozinha</h3><p>Boas conversas começam aqui.</p></div></div>
+        </article>
+        <article class="environment-card reveal" data-category="lavanderia">
+          <button class="card-image-button" data-detail="lavanderia" aria-label="Conhecer inspirações para a lavanderia"><img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=900&q=85" alt="Máquinas de lavar em um ambiente de lavanderia" loading="lazy"><span class="image-tag">Cuidado que se sente</span><span class="card-arrow"><i data-lucide="arrow-up-right"></i></span></button>
+          <div class="card-text"><span class="card-number">02 /</span><div><h3>Lavanderia</h3><p>Renove suas roupas. Preserve histórias.</p></div></div>
+        </article>
+        <article class="environment-card reveal" data-category="conforto">
+          <button class="card-image-button" data-detail="conforto" aria-label="Conhecer inspirações para o conforto da casa"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Sala de estar acolhedora com sofá e detalhes naturais" loading="lazy"><span class="image-tag">Seu lugar no mundo</span><span class="card-arrow"><i data-lucide="arrow-up-right"></i></span></button>
+          <div class="card-text"><span class="card-number">03 /</span><div><h3>Conforto</h3><p>Respire fundo. Você está em casa.</p></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="essence" id="essencia">
+      <div class="essence-inner section reveal">
+        <span class="eyebrow">Nossa essência</span>
+        <h2>O melhor design não chama<br>atenção. <span>Faz a diferença.</span></h2>
+        <div class="essence-bottom"><p>Na simplicidade das formas, na inteligência dos detalhes e no respeito pelo seu tempo. Nossa origem escandinava inspira um jeito mais leve de viver, todos os dias.</p><a href="https://www.electrolux.com.br/" target="_blank" rel="noopener noreferrer" class="text-link">Conheça a Electrolux <i data-lucide="arrow-up-right"></i></a></div>
+        <div class="heritage"><span>1919</span><p>Uma história de inovação.<br>Um olhar para o amanhã.</p><i data-lucide="globe-2"></i></div>
+      </div>
+    </section>
+
+    <section class="section care" id="cuidados">
+      <div class="care-heading reveal"><span class="eyebrow">Pequenas escolhas, grandes cuidados</span><h2>O amanhã começa<br>no que fazemos hoje.</h2><a href="https://www.electrolux.com.br/" target="_blank" rel="noopener noreferrer" class="text-link">Explore no site oficial <i data-lucide="arrow-up-right"></i></a></div>
+      <div class="care-list reveal">
+        <div><span>01</span><div><h3>Mais sabor. Menos desperdício.</h3><p>Organize os alimentos e redescubra o que já está na sua geladeira.</p></div><i data-lucide="utensils"></i></div>
+        <div><span>02</span><div><h3>Suas roupas, por mais tempo.</h3><p>Respeite as etiquetas e escolha o ciclo certo para cada tecido.</p></div><i data-lucide="shirt"></i></div>
+        <div><span>03</span><div><h3>Uma rotina mais leve.</h3><p>Abra espaço para o que importa, com uma casa que acompanha você.</p></div><i data-lucide="sun"></i></div>
+      </div>
+    </section>
+    <section class="closing"><div><span class="eyebrow">Feito para estar com você</span><h2>Vamos cuidar do seu próximo momento?</h2></div><a class="button button-white" href="https://www.electrolux.com.br/" target="_blank" rel="noopener noreferrer">Visite a loja oficial <i data-lucide="arrow-up-right"></i></a></section>
+  </main>
+
+  <footer class="footer"><div class="footer-top"><a href="#" class="wordmark">Electrolux<span class="brand-dot"></span></a><p>Shape living for the better.</p><a href="#conteudo" class="back-top" title="Voltar ao topo">Voltar ao topo <i data-lucide="arrow-up"></i></a></div><div class="footer-bottom"><span>Projeto demonstrativo independente. Não é o site oficial da Electrolux.</span><span>Fotografia: Unsplash</span><a href="https://www.electrolux.com.br/" target="_blank" rel="noopener noreferrer">Site oficial <i data-lucide="arrow-up-right"></i></a></div></footer>
+
+  <dialog id="search-dialog" class="dialog search-dialog" aria-labelledby="search-title"><div class="dialog-heading"><h2 id="search-title">O que você procura?</h2><button class="icon-button" data-close aria-label="Fechar busca" title="Fechar"><i data-lucide="x"></i></button></div><label for="search-input">Encontre seu ambiente</label><div class="search-field"><i data-lucide="search"></i><input id="search-input" type="search" placeholder="Cozinha, lavanderia, conforto..." autocomplete="off"></div><div id="search-results" aria-live="polite"></div></dialog>
+  <dialog id="detail-dialog" class="dialog detail-dialog" aria-labelledby="detail-title"><div class="dialog-heading"><span class="eyebrow">Inspiração para sua casa</span><button class="icon-button" data-close aria-label="Fechar detalhes" title="Fechar"><i data-lucide="x"></i></button></div><h2 id="detail-title"></h2><p id="detail-description"></p><ul id="detail-tips"></ul><a class="button button-primary" href="https://www.electrolux.com.br/" target="_blank" rel="noopener noreferrer">Conheça os produtos no site oficial <i data-lucide="arrow-up-right"></i></a></dialog>
+</body>
+</html>
