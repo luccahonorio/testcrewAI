@@ -148,15 +148,25 @@ nav.addEventListener('click', e => {
 $$('[data-close]').forEach(btn => btn.addEventListener('click', () => btn.closest('dialog').close()));
 $$('dialog').forEach(d => d.addEventListener('click', e => { if (e.target === d) d.close(); }));
 
-/* Login (estático, só guarda nome/e-mail no navegador) */
+/* Login mockado: válido somente enquanto a aba/sessão atual estiver aberta */
 const USER_KEY = 'cuida-user';
 
+function getCurrentUser() {
+    return JSON.parse(sessionStorage.getItem(USER_KEY) || 'null');
+}
+
 function renderUser() {
-    const user = JSON.parse(localStorage.getItem(USER_KEY) || 'null');
+    const user = getCurrentUser();
+
     $('#login-open').hidden = !!user;
     $('#account').hidden = !user;
     $('#welcome').hidden = !!user || sessionStorage.getItem('welcome-closed') === '1';
-    if (user) $('#account-name').textContent = `Olá, ${user.name}`;
+
+    if (user) {
+        $('#account-name').textContent = `Olá, ${user.name}`;
+    } else {
+        $('#account-name').textContent = '';
+    }
 }
 
 $('#login-open').addEventListener('click', () => openDialog('login-dialog'));
@@ -164,8 +174,13 @@ $$('[data-open-login]').forEach(b => b.addEventListener('click', () => openDialo
 
 $('#login-form').addEventListener('submit', e => {
     e.preventDefault();
+
     const data = new FormData(e.target);
-    localStorage.setItem(USER_KEY, JSON.stringify({ name: data.get('name').trim(), email: data.get('email') }));
+    const name = String(data.get('name') || '').trim();
+    const email = String(data.get('email') || '').trim();
+
+    sessionStorage.setItem(USER_KEY, JSON.stringify({ name, email }));
+
     e.target.reset();
     $('#login-dialog').close();
     renderUser();
@@ -173,7 +188,7 @@ $('#login-form').addEventListener('submit', e => {
 });
 
 $('#logout').addEventListener('click', () => {
-    localStorage.removeItem(USER_KEY);
+    sessionStorage.removeItem(USER_KEY);
     closeDropdowns();
     renderUser();
     toast('Você saiu da sua conta.');
