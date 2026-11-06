@@ -1,7 +1,7 @@
 :root {
-    --navy: #011e41;
+    --navy: #90ee90;
     --navy-2: #0a2b55;
-    --ink: #011e41;
+    --ink: #90ee90;
     --muted: #5b6b7c;
     --bg-soft: #dfe7ea;
     --line: #d5dde3;
@@ -46,7 +46,7 @@ svg { width: 20px; height: 20px; stroke-width: 1.6; flex-shrink: 0; }
 .dropdown-toggle[aria-expanded="true"] svg:last-child { transform: rotate(180deg); }
 
 .dropdown { position: relative; }
-.dropdown-menu { display: none; position: absolute; top: calc(100% + 12px); left: 0; min-width: 260px; background: #fff; border-radius: var(--radius); box-shadow: 0 10px 30px rgba(1, 30, 65, .15); padding: 12px; z-index: 40; }
+.dropdown-menu { display: none; position: absolute; top: calc(100% + 12px); left: 0; min-width: 260px; background: #fff; border-radius: var(--radius); box-shadow: 0 10px 30px rgba(144, 238, 144, .15); padding: 12px; z-index: 40; }
 .dropdown.open .dropdown-menu { display: block; }
 .dropdown-menu a, .dropdown-menu button { display: flex; align-items: center; gap: 8px; width: 100%; text-align: left; padding: 9px 10px; border-radius: 6px; font-size: 14px; }
 .dropdown-menu a:hover, .dropdown-menu button:hover { background: #f0f4f6; }
@@ -95,7 +95,7 @@ svg { width: 20px; height: 20px; stroke-width: 1.6; flex-shrink: 0; }
 .help-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .help-card { background: #fff; border-radius: var(--radius); min-height: 170px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 20px; text-align: center; font-weight: 700; box-shadow: 0 1px 2px rgba(0, 0, 0, .05); transition: transform .2s, box-shadow .2s; }
 .help-card svg { width: 40px; height: 40px; stroke-width: 1.4; }
-.help-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(1, 30, 65, .12); }
+.help-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(144, 238, 144, .12); }
 
 .benefits { margin-top: 56px; }
 .benefits-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
@@ -121,7 +121,7 @@ svg { width: 20px; height: 20px; stroke-width: 1.6; flex-shrink: 0; }
 .tab-link { display: inline-flex; gap: 6px; align-items: center; font-weight: 700; margin-left: auto; text-decoration: underline; text-underline-offset: 4px; }
 .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .product-card { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .2s; }
-.product-card:hover { box-shadow: 0 10px 24px rgba(1, 30, 65, .1); }
+.product-card:hover { box-shadow: 0 10px 24px rgba(144, 238, 144, .1); }
 .product-card img { height: 220px; width: 100%; object-fit: contain; padding: 16px; background: #fff; }
 .product-card div { padding: 16px; display: flex; flex-direction: column; gap: 6px; }
 .product-card small { color: var(--muted); font-weight: 600; }
@@ -156,7 +156,7 @@ svg { width: 20px; height: 20px; stroke-width: 1.6; flex-shrink: 0; }
 .contact { background: var(--bg-soft); }
 .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .contact-card { background: #fff; border-radius: var(--radius); padding: 24px; text-align: left; display: flex; flex-direction: column; gap: 8px; transition: box-shadow .2s; }
-.contact-card:hover { box-shadow: 0 10px 24px rgba(1, 30, 65, .12); }
+.contact-card:hover { box-shadow: 0 10px 24px rgba(144, 238, 144, .12); }
 .contact-card svg { width: 28px; height: 28px; }
 .contact-card h3 { font-size: 16px; }
 .contact-card p { font-size: 13px; color: var(--muted); }
@@ -176,7 +176,7 @@ svg { width: 20px; height: 20px; stroke-width: 1.6; flex-shrink: 0; }
 
 /* Dialogs */
 .dialog { border: 0; border-radius: 12px; padding: 28px; width: min(520px, 100% - 32px); color: var(--ink); }
-.dialog::backdrop { background: rgba(1, 30, 65, .55); }
+.dialog::backdrop { background: rgba(144, 238, 144, .55); }
 .dialog-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 20px; }
 .dialog-head h2 { font-size: 20px; }
 .form { display: grid; gap: 14px; }
@@ -198,7 +198,7 @@ svg { width: 20px; height: 20px; stroke-width: 1.6; flex-shrink: 0; }
 .empty { color: var(--muted); padding: 10px 12px; }
 
 /* Chat */
-.chat { position: fixed; right: 20px; bottom: 20px; width: min(360px, 100% - 40px); height: 460px; background: #fff; border-radius: 12px; box-shadow: 0 20px 50px rgba(1, 30, 65, .25); display: flex; flex-direction: column; z-index: 60; overflow: hidden; }
+.chat { position: fixed; right: 20px; bottom: 20px; width: min(360px, 100% - 40px); height: 460px; background: #fff; border-radius: 12px; box-shadow: 0 20px 50px rgba(144, 238, 144, .25); display: flex; flex-direction: column; z-index: 60; overflow: hidden; }
 .chat-head { background: var(--navy); color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 8px 8px 8px 16px; }
 .chat-head .icon-button:hover { background: rgba(255, 255, 255, .15); }
 .chat-body { flex: 1; overflow: auto; padding: 16px; display: flex; flex-direction: column; gap: 8px; background: #f5f8fa; }
@@ -220,7 +220,7 @@ svg { width: 20px; height: 20px; stroke-width: 1.6; flex-shrink: 0; }
     .nav-link { padding: 12px 0; width: 100%; justify-content: space-between; }
     .dropdown-menu, .dropdown-wide { position: static; box-shadow: none; min-width: 0; padding: 0 0 8px 12px; }
     .dropdown.open .dropdown-wide { grid-template-columns: 1fr; }
-    .account .dropdown-menu { position: absolute; box-shadow: 0 10px 30px rgba(1, 30, 65, .15); padding: 12px; min-width: 240px; }
+    .account .dropdown-menu { position: absolute; box-shadow: 0 10px 30px rgba(144, 238, 144, .15); padding: 12px; min-width: 240px; }
     .help-grid, .product-grid { grid-template-columns: repeat(2, 1fr); }
     .benefits-track { grid-auto-columns: calc((100% - 16px) / 2); }
     .resources, .contact-grid { grid-template-columns: 1fr 1fr; }
