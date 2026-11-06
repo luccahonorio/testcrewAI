@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#011e41">
+    <meta name="description" content="Electrolux Cuida: assistência técnica, registro de produto, guias, manuais e benefícios para seu Electrolux.">
+    <title>Prolongue a vida dos seus eletrodomésticos | Electrolux</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <div class="topbar">
+        <div class="container">
+            <a href="https://loja.electrolux.com.br/" target="_blank" rel="noopener noreferrer">Acesse a loja <i data-lucide="shopping-cart"></i></a>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a class="logo" href="#" aria-label="Electrolux Cuida, início">
+                <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="2" fill="#011e41"/><path d="M6 6h10L6 16zM26 26H16l10-10z" fill="#fff"/><path d="M6 19l7-7h3l-10 10zM26 13l-7 7h-3l10-10z" fill="#fff"/></svg>
+                <span>Electrolux</span>
+            </a>
+
+            <nav class="nav" id="nav" aria-label="Navegação principal">
+                <a class="nav-link" href="#ajuda">Registro de produto</a>
+                <a class="nav-link" href="#assistencia">Agendar serviços</a>
+
+                <div class="dropdown">
+                    <button class="nav-link dropdown-toggle" aria-expanded="false">Conheça seu produto <i data-lucide="chevron-down"></i></button>
+                    <div class="dropdown-menu dropdown-wide">
+                        <div>
+                            <h4>Eletrodomésticos</h4>
+                            <a href="#produtos" data-category="geladeira">Geladeira / Refrigerador</a>
+                            <a href="#produtos" data-category="fogao">Fogão / Cooktop</a>
+                            <a href="#produtos" data-category="cozinha">Micro-ondas</a>
+                            <a href="#produtos" data-category="cozinha">Lava-louças</a>
+                        </div>
+                        <div>
+                            <h4>Eletroportáteis</h4>
+                            <a href="#produtos" data-category="portateis">Air fryers</a>
+                            <a href="#produtos" data-category="portateis">Cafeteiras</a>
+                            <a href="#produtos" data-category="portateis">Liquidificadores</a>
+                        </div>
+                        <div>
+                            <h4>Utilidades domésticas</h4>
+                            <a href="#produtos">Panelas</a>
+                            <a href="#produtos">Acessórios</a>
+                            <a href="#produtos">Refis e filtros</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="nav-link dropdown-toggle" aria-expanded="false">Tutoriais e dicas <i data-lucide="chevron-down"></i></button>
+                    <div class="dropdown-menu">
+                        <a href="#ajuda">Guias e manuais</a>
+                        <a href="#recursos">Dicas e artigos</a>
+                        <a href="#recursos">Receitas</a>
+                        <a href="#recursos">Rotinas de Cuidado</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="nav-link dropdown-toggle" aria-expanded="false">Atendimento <i data-lucide="chevron-down"></i></button>
+                    <div class="dropdown-menu">
+                        <a href="#assistencia">Solicitar assistência técnica</a>
+                        <a href="#faq">Dúvidas frequentes</a>
+                        <a href="#assistencia">Encontrar autorizada mais próxima</a>
+                        <a href="#contato">Atendimento Electrolux</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-button" id="search-open" aria-label="Buscar" title="Buscar"><i data-lucide="search"></i></button>
+
+                <button class="login-button" id="login-open"><i data-lucide="user"></i> <span>Entrar</span></button>
+
+                <div class="dropdown account" id="account" hidden>
+                    <button class="login-button dropdown-toggle" aria-expanded="false"><i data-lucide="user"></i> <span id="account-name"></span> <i data-lucide="chevron-down"></i></button>
+                    <div class="dropdown-menu dropdown-right">
+                        <a href="#">Minha conta</a>
+                        <a href="#">Minhas conquistas <span class="badge">Novo</span></a>
+                        <a href="#">Minhas assistências</a>
+                        <a href="#">Meus produtos registrados</a>
+                        <a href="#">Atividades recentes</a>
+                        <a href="#beneficios">Meus benefícios</a>
+                        <button id="logout">Sair</button>
+                    </div>
+                </div>
+
+                <button class="icon-button menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-controls="nav" aria-expanded="false"><i data-lucide="menu"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="welcome" id="welcome">
+        <div class="container welcome-inner">
+            <p><strong>Que bom ter você no Electrolux Cuida!</strong> Que tal aproveitar uma experiência personalizada em nosso site?</p>
+            <div>
+                <button class="button button-primary button-sm" data-open-login>Entrar</button>
+                <button class="icon-button" id="welcome-close" aria-label="Fechar aviso"><i data-lucide="x"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <main id="conteudo">
+        <section class="hero">
+            <div class="container hero-inner">
+                <img src="https://cuida.electrolux.com.br/assets/images/home/banner-home-mobile.webp"
+                    alt="Mulher relaxando no sofá olhando o celular" fetchpriority="high">
+                <div class="hero-box">
+                    <h1>Se é Electrolux,<br>Electrolux Cuida</h1>
+                    <p>Aqui você encontra a ajuda que precisa, benefícios e conteúdos para seu produto</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="help" id="ajuda">
+            <div class="container">
+                <h2 class="title">Como podemos <strong>te ajudar?</strong></h2>
+                <div class="help-grid">
+                    <a class="help-card" href="#assistencia"><i data-lucide="wrench"></i><span>Solicitar assistência técnica</span></a>
+                    <button class="help-card" id="register-open"><i data-lucide="gift"></i><span>Registrar produto</span></button>
+                    <a class="help-card" href="https://cuida.electrolux.com.br/guias-e-manuais" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i><span>Guias e manuais</span></a>
+                    <a class="help-card" href="#faq"><i data-lucide="circle-help"></i><span>Dúvidas frequentes</span></a>
+                </div>
+
+                <div class="benefits" id="beneficios">
+                    <div class="benefits-head">
+                        <h3>Benefícios que você pode ganhar</h3>
+                        <div class="carousel-controls">
+                            <button class="icon-button round" data-scroll="-1" aria-label="Anterior"><i data-lucide="chevron-left"></i></button>
+                            <button class="icon-button round" data-scroll="1" aria-label="Próximo"><i data-lucide="chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="benefits-track" id="benefits-track"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section products" id="produtos">
+            <div class="container">
+                <h2 class="title">Descubra tudo o que seu produto <strong>tem a oferecer</strong></h2>
+                <p class="subtitle">Aqui você encontra tutoriais, vídeos, artigos e guias de uso exclusivos para aproveitar o máximo dos seus produtos Electrolux do primeiro uso até os cuidados no dia a dia.</p>
+                <div class="tabs" role="tablist" id="product-tabs">
+                    <button role="tab" class="tab active" data-tab="geladeira" aria-selected="true">Geladeira / Refrigerador</button>
+                    <button role="tab" class="tab" data-tab="fogao" aria-selected="false">Fogão / Cooktop</button>
+                    <button role="tab" class="tab" data-tab="cozinha" aria-selected="false">Micro-ondas / Lava-louças</button>
+                    <button role="tab" class="tab" data-tab="portateis" aria-selected="false">Eletroportáteis</button>
+                    <a class="tab-link" href="https://cuida.electrolux.com.br/produtos/categoria-produtos-electrolux" target="_blank" rel="noopener noreferrer">Confira mais categorias <i data-lucide="arrow-right"></i></a>
+                </div>
+                <div class="product-grid" id="product-grid" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="section" id="assistencia">
+            <div class="container assistance">
+                <div class="assistance-text">
+                    <h2>Nossa assistência técnica<br><strong>está preparada para você</strong></h2>
+                    <div class="assistance-actions">
+                        <button class="button button-primary" id="schedule-open">Solicitar assistência</button>
+                        <button class="button button-outline" id="find-open">Encontrar autorizada mais próxima</button>
+                    </div>
+                </div>
+                <img src="https://cuida.electrolux.com.br/assets/images/home/assistance.webp"
+                    alt="Técnico realizando assistência" loading="lazy">
+            </div>
+        </section>
+
+        <section class="section faq" id="faq">
+            <div class="container narrow">
+                <h2 class="title">Dúvidas frequentes</h2>
+                <div class="faq-list" id="faq-list"></div>
+                <a class="text-link" href="https://cuida.electrolux.com.br/duvidas-frequentes" target="_blank" rel="noopener noreferrer">Ver todas as dúvidas <i data-lucide="arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="section" id="recursos">
+            <div class="container">
+                <h2 class="title">Outros recursos <strong>para você</strong></h2>
+                <div class="resources">
+                    <a class="resource-card" href="https://cuida.electrolux.com.br/receitas" target="_blank" rel="noopener noreferrer">
+                        <i data-lucide="chef-hat"></i>
+                        <div><h3>Receitas para seu produto Electrolux</h3><p>Descubra receitas pensadas para aproveitar ao máximo os recursos do seu Electrolux</p></div>
+                    </a>
+                    <a class="resource-card" href="https://cuida.electrolux.com.br/rotinas-de-cuidado" target="_blank" rel="noopener noreferrer">
+                        <i data-lucide="bell-ring"></i>
+                        <div><h3>Acessar tutoriais e lembretes</h3><p>Rotinas de cuidado para manter seu produto sempre em dia</p></div>
+                    </a>
+                    <a class="resource-card" href="https://loja.electrolux.com.br/garantia-estendida" target="_blank" rel="noopener noreferrer">
+                        <i data-lucide="shield-check"></i>
+                        <div><h3>Contratar garantia estendida</h3><p>Mais tempo de proteção para o seu produto</p></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact" id="contato">
+            <div class="container">
+                <h2 class="title">Deseja falar conosco?<br><strong>Utilize nossos canais de atendimento:</strong></h2>
+                <div class="contact-grid">
+                    <a class="contact-card" href="https://cuida.electrolux.com.br/contato" target="_blank" rel="noopener noreferrer"><i data-lucide="headset"></i><h3>Atendimento Electrolux</h3><p>Estamos prontos para lhe atender, escolha a melhor forma de entrar em contato.</p></a>
+                    <a class="contact-card" href="https://cuida.electrolux.com.br/contato/whatsapp" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i><h3>WhatsApp</h3><p>Assistência técnica para produtos em garantia de até 1 ano, além de suporte para peças, reparos e dúvidas.</p></a>
+                    <button class="contact-card" id="chat-open"><i data-lucide="messages-square"></i><h3>Chat online da loja</h3><p>Converse sobre a entrega do produto, pedido, pagamento, trocas e devoluções.</p></button>
+                    <a class="contact-card" href="https://cuida.electrolux.com.br/fale-conosco" target="_blank" rel="noopener noreferrer"><i data-lucide="mail"></i><h3>Fale conosco</h3><p>Envie sua mensagem e responderemos diretamente no seu e-mail.</p></a>
+                    <a class="contact-card" href="tel:08007288778"><i data-lucide="phone"></i><h3>Telefone 0800 728 8778</h3><p>Atendimento de segunda a sexta, das 8h às 18h e aos sábados das 8h às 14h.</p></a>
+                    <a class="contact-card" href="https://cuida.electrolux.com.br/acessibilidade" target="_blank" rel="noopener noreferrer"><i data-lucide="hand"></i><h3>Atendimento Libras</h3><p>Saiba os horários do nosso atendimento que usa a língua brasileira de sinais.</p></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>Atalhos</h4>
+                    <a href="#faq">Dúvidas frequentes</a>
+                    <a href="#ajuda">Guias e manuais</a>
+                    <a href="#assistencia">Solicitar assistência técnica</a>
+                    <a href="#assistencia">Encontrar autorizada mais próxima</a>
+                    <a href="#produtos">Categorias dos produtos Electrolux</a>
+                </div>
+                <div>
+                    <h4>Canais de atendimento</h4>
+                    <a href="#contato">Atendimento Electrolux</a>
+                    <p>Todos os nossos canais de atendimento em um só lugar.</p>
+                    <a href="https://cuida.electrolux.com.br/contato/whatsapp" target="_blank" rel="noopener noreferrer">Assistência via WhatsApp</a>
+                    <p>Seu canal para acompanhar pedidos, solicitar serviços e obter suporte para produtos.</p>
+                    <button class="footer-link" data-open-chat>Acessar chat on-line</button>
+                    <p>Tire suas dúvidas com nosso agente virtual Electrolux. De segunda a sábado, das 8h às 18h.</p>
+                </div>
+                <div>
+                    <h4>Nosso telefone</h4>
+                    <p>De segunda a sexta, das 8h às 18h e sábados das 8h às 14h.</p>
+                    <a href="tel:08007288778">0800 728 8778</a>
+                    <a href="https://icom.app/electrolux-site" target="_blank" rel="noopener noreferrer">Atendimento em Libras</a>
+                    <h4>Onde comprar</h4>
+                    <a href="https://loja.electrolux.com.br/" target="_blank" rel="noopener noreferrer">Loja on-line</a>
+                    <a href="https://loja.electrolux.com.br/outlet-stores" target="_blank" rel="noopener noreferrer">Lojas outlet (valor reduzido)</a>
+                </div>
+                <div>
+                    <h4>Sobre a Electrolux</h4>
+                    <a href="https://cuida.electrolux.com.br/electrolux-cuida" target="_blank" rel="noopener noreferrer">Electrolux Cuida</a>
+                    <a href="https://cuida.electrolux.com.br/faca-parte" target="_blank" rel="noopener noreferrer">Faça parte</a>
+                    <h4>Aproveite nossas redes sociais</h4>
+                    <div class="social">
+                        <a href="https://www.facebook.com/electroluxbr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="https://www.instagram.com/electroluxbr/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="https://youtube.com/electroluxbr" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+                        <a href="https://www.linkedin.com/company/electrolux/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-legal">
+                <a href="https://cuida.electrolux.com.br/politica-de-privacidade" target="_blank" rel="noopener noreferrer">Termos e Condições - Políticas</a>
+                <p>Copyright Electrolux @ 2022 todos os direitos reservados - Loja Electrolux Comércio virtual de eletrodomésticos LTDA. Rua João Lunardelli, 2205 - Cidade Industrial - Curitiba - PR - CEP: 81460-100. CNPJ: 13.986.197/0001-21.</p>
+                <p>As fotos dos produtos são meramente ilustrativas. As especificações técnicas e descrições estão sujeitas a alterações sem aviso prévio.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Busca -->
+    <dialog class="dialog" id="search-dialog" aria-labelledby="search-title">
+        <div class="dialog-head">
+            <h2 id="search-title">O que você procura?</h2>
+            <button class="icon-button" data-close aria-label="Fechar"><i data-lucide="x"></i></button>
+        </div>
+        <div class="field-icon"><i data-lucide="search"></i><input id="search-input" type="search" placeholder="Busque por produto, dúvida ou serviço" autocomplete="off"></div>
+        <ul class="search-results" id="search-results" aria-live="polite"></ul>
+    </dialog>
+
+    <!-- Login -->
+    <dialog class="dialog" id="login-dialog" aria-labelledby="login-title">
+        <div class="dialog-head">
+            <h2 id="login-title">Entrar no Electrolux Cuida</h2>
+            <button class="icon-button" data-close aria-label="Fechar"><i data-lucide="x"></i></button>
+        </div>
+        <form id="login-form" class="form">
+            <label>Nome<input name="name" required maxlength="40" autocomplete="given-name"></label>
+            <label>E-mail<input name="email" type="email" required autocomplete="email"></label>
+            <label>Senha<input name="password" type="password" required minlength="6" autocomplete="current-password"></label>
+            <button class="button button-primary" type="submit">Entrar</button>
+            <small>Demonstração: nenhum dado é enviado.</small>
+        </form>
+    </dialog>
+
+    <!-- Registrar produto -->
+    <dialog class="dialog" id="register-dialog" aria-labelledby="register-title">
+        <div class="dialog-head">
+            <h2 id="register-title">Registrar produto</h2>
+            <button class="icon-button" data-close aria-label="Fechar"><i data-lucide="x"></i></button>
+        </div>
+        <form id="register-form" class="form">
+            <label>Categoria
+                <select name="category" required>
+                    <option value="">Selecione</option>
+                    <option>Geladeira / Refrigerador</option>
+                    <option>Fogão</option>
+                    <option>Lavadora</option>
+                    <option>Forno</option>
+                    <option>Ar-condicionado</option>
+                </select>
+            </label>
+            <label>Modelo<input name="model" required placeholder="Ex.: IM8B" maxlength="20"></label>
+            <label>Número de série<input name="serial" required maxlength="30"></label>
+            <label>Data da compra<input name="date" type="date" required></label>
+            <button class="button button-primary" type="submit">Registrar</button>
+        </form>
+    </dialog>
+
+    <!-- Agendar assistência -->
+    <dialog class="dialog" id="schedule-dialog" aria-labelledby="schedule-title">
+        <div class="dialog-head">
+            <h2 id="schedule-title">Solicitar assistência técnica</h2>
+            <button class="icon-button" data-close aria-label="Fechar"><i data-lucide="x"></i></button>
+        </div>
+        <form id="schedule-form" class="form">
+            <label>Produto<input name="product" required placeholder="Ex.: Lavadora LES09"></label>
+            <label>Tipo de serviço
+                <select name="service" required>
+                    <option>Reparo</option>
+                    <option>Instalação</option>
+                    <option>Manutenção preventiva</option>
+                </select>
+            </label>
+            <label>CEP<input name="cep" required pattern="\d{5}-?\d{3}" placeholder="00000-000"></label>
+            <label>Data preferencial<input name="date" type="date" required></label>
+            <label>Descreva o problema<textarea name="desc" rows="3" maxlength="500"></textarea></label>
+            <button class="button button-primary" type="submit">Agendar</button>
+        </form>
+    </dialog>
+
+    <!-- Encontrar autorizada -->
+    <dialog class="dialog" id="find-dialog" aria-labelledby="find-title">
+        <div class="dialog-head">
+            <h2 id="find-title">Encontrar autorizada mais próxima</h2>
+            <button class="icon-button" data-close aria-label="Fechar"><i data-lucide="x"></i></button>
+        </div>
+        <form id="find-form" class="form form-inline">
+            <input name="cep" required pattern="\d{5}-?\d{3}" placeholder="Digite seu CEP" aria-label="CEP">
+            <button class="button button-primary" type="submit">Buscar</button>
+        </form>
+        <ul class="store-list" id="store-list"></ul>
+    </dialog>
+
+    <!-- Chat -->
+    <aside class="chat" id="chat" hidden aria-label="Chat online">
+        <div class="chat-head">
+            <strong>Agente virtual Electrolux</strong>
+            <button class="icon-button" id="chat-close" aria-label="Fechar chat"><i data-lucide="x"></i></button>
+        </div>
+        <div class="chat-body" id="chat-body" aria-live="polite"></div>
+        <form class="chat-form" id="chat-form">
+            <input id="chat-input" placeholder="Digite sua mensagem" autocomplete="off" maxlength="300" aria-label="Mensagem">
+            <button class="icon-button" type="submit" aria-label="Enviar"><i data-lucide="send"></i></button>
+        </form>
+    </aside>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>
